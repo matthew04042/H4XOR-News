@@ -11,6 +11,10 @@
 		E842327F2999476100EA76F1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E842327E2999476100EA76F1 /* ContentView.swift */; };
 		E84232812999476100EA76F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E84232802999476100EA76F1 /* Assets.xcassets */; };
 		E84232842999476100EA76F1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E84232832999476100EA76F1 /* Preview Assets.xcassets */; };
+		E842328D2999698F00EA76F1 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E842328C2999698F00EA76F1 /* NetworkManager.swift */; };
+		E842328F29996B6300EA76F1 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E842328E29996B6300EA76F1 /* PostData.swift */; };
+		E84232922999738A00EA76F1 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84232912999738A00EA76F1 /* DetailView.swift */; };
+		E84232942999777000EA76F1 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84232932999777000EA76F1 /* WebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,12 @@
 		E842327E2999476100EA76F1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E84232802999476100EA76F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E84232832999476100EA76F1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E842328A299949B600EA76F1 /* H4XOR-News-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "H4XOR-News-Info.plist"; sourceTree = SOURCE_ROOT; };
+		E842328C2999698F00EA76F1 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		E842328E29996B6300EA76F1 /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
+		E84232912999738A00EA76F1 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		E84232932999777000EA76F1 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		E84232952999B1FF00EA76F1 /* H4XOR News.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "H4XOR News.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +61,10 @@
 		E842327B2999476100EA76F1 /* H4XOR News */ = {
 			isa = PBXGroup;
 			children = (
+				E84232952999B1FF00EA76F1 /* H4XOR News.entitlements */,
+				E84232902999737000EA76F1 /* Views */,
+				E842328B2999696B00EA76F1 /* Models */,
+				E842328A299949B600EA76F1 /* H4XOR-News-Info.plist */,
 				E842327C2999476100EA76F1 /* H4XOR_NewsApp.swift */,
 				E842327E2999476100EA76F1 /* ContentView.swift */,
 				E84232802999476100EA76F1 /* Assets.xcassets */,
@@ -65,6 +79,24 @@
 				E84232832999476100EA76F1 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E842328B2999696B00EA76F1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E842328C2999698F00EA76F1 /* NetworkManager.swift */,
+				E842328E29996B6300EA76F1 /* PostData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E84232902999737000EA76F1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E84232912999738A00EA76F1 /* DetailView.swift */,
+				E84232932999777000EA76F1 /* WebView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +169,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E842328D2999698F00EA76F1 /* NetworkManager.swift in Sources */,
+				E842328F29996B6300EA76F1 /* PostData.swift in Sources */,
 				E842327F2999476100EA76F1 /* ContentView.swift in Sources */,
+				E84232942999777000EA76F1 /* WebView.swift in Sources */,
+				E84232922999738A00EA76F1 /* DetailView.swift in Sources */,
 				E842327D2999476100EA76F1 /* H4XOR_NewsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,13 +300,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "H4XOR News/H4XOR News.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"H4XOR News/Preview Content\"";
 				DEVELOPMENT_TEAM = 4A722Y9735;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = "H4XOR-News-Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -282,6 +319,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.matthewcheung.H4XOR-News";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -293,13 +333,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "H4XOR News/H4XOR News.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"H4XOR News/Preview Content\"";
 				DEVELOPMENT_TEAM = 4A722Y9735;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = "H4XOR-News-Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -311,6 +352,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.matthewcheung.H4XOR-News";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
